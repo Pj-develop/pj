@@ -13,6 +13,8 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
+import Achievements from "./components/Achievements/Achievements.jsx";
+import Certifications from "./components/Certification/Certification.jsx";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -38,7 +40,7 @@ function App() {
   // eslint-disable-next-line no-unused-vars
   const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
-  console.log(openModal);
+  // console.log(openModal);
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Router>
@@ -49,11 +51,15 @@ function App() {
             <Skills />
             <Experience />
           </Wrapper>
+          <Achievements /> 
+        
           <Projects openModal={openModal} setOpenModal={setOpenModal} />
+          <Certifications />
           <Wrapper>
             <Education />
             <Contact />
           </Wrapper>
+          
           <Footer />
           {openModal.state && (
             <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />

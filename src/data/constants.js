@@ -1,6 +1,6 @@
 export const Bio = {
   name: "Priyanshu Jha",
-  roles: [
+  roles: ["Software Developer",
     "Full Stack Developer",
     "Python Developer",
     "UI/UX Designer",
@@ -10,6 +10,7 @@ export const Bio = {
   ],
   description: " I will win not immediately, but definitely !! ",
   github: "https://github.com/Pj-develop/",
+  linktree: "https://linktr.ee/priyanshu.j",
   resume:
     "https://drive.google.com/file/d/1M_63miO4hfBPfAxWDPdiQLD9_MQPe-2a/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/pjdevelop/",
@@ -63,6 +64,14 @@ export const skills = [
         name: "Flask",
         image: "https://i.ibb.co/9VccxJb/flask-logo-png-transparent.png",
       },
+      {
+        name: "Next JS",
+        image: "https://i.ibb.co/JM3JN75/nextjs.png",
+      },
+      {
+        name: "Angular",
+        image: "https://i.ibb.co/8gKZ1X9j/angular.png",
+      },
     ],
   },
   {
@@ -91,6 +100,11 @@ export const skills = [
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
       },
+      {
+        name: "Laravel",
+        image:
+          "https://i.ibb.co/8DR2DgcY/larvel.jpg",
+      },
     ],
   },
   {
@@ -111,6 +125,16 @@ export const skills = [
         image:
           "https://developer.android.com/static/studio/images/new-studio-logo-1_1920.png",
       },
+      {
+        name: "React Native",
+        image:
+          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+      },
+      {
+        name: "Capacitor JS",
+        image:
+          "https://i.ibb.co/p6wXjyK6/capa.webp",
+      },
     ],
   },
   {
@@ -119,7 +143,7 @@ export const skills = [
       {
         name: "Git",
         image:
-          "https://camo.githubusercontent.com/fbfcb9e3dc648adc93bef37c718db16c52f617ad055a26de6dc3c21865c3321d/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667",
+          "https://i.ibb.co/s9BVM3xT/git.png",
       },
       {
         name: "GitHub",
@@ -139,7 +163,22 @@ export const skills = [
       {
         name: "Figma",
         image:
-          "https://camo.githubusercontent.com/ed93c2b000a76ceaad1503e7eb9356591b885227e82a36a005b9d3498b303ba5/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6669676d612f6669676d612d69636f6e2e737667",
+          "https://i.ibb.co/JWkvXNKj/figma.jpg",
+      },
+      {
+        name: "Docker",
+        image:
+          "https://i.ibb.co/Q7t3HrRB/dockerr.png",
+      },
+      {
+        name: "Microsoft Office",
+        image:
+          "https://i.ibb.co/fYtQfGxG/office.jpg",
+      },
+      {
+        name: "Amazon Web Services",
+        image:
+          "https://i.ibb.co/LhzZj2Kr/aws.jpg",
       },
     ],
   },
@@ -147,31 +186,32 @@ export const skills = [
 
 export const experiences = [
   {
-    id: 0,
-    img: "https://i.ibb.co/82443bw/logo.png",
-    role: "Founder",
-    company: "MUZ India Industries",
-    date: "June 2021 - Present",
-    desc: "Handing Bidding, Human Resource, Finance, Accounting, & Other Day to Day Managing Work",
+    id: 1,
+    img: "https://i.ibb.co/pjBMWYNf/ngosarthiogo.jpg",
+    role: "Web Development Intern",
+    company: "Sarthi NGO",
+    date: "June 2024 - Present",
+    desc: "Modernised a responsive website using React JS, increasing user engagement by 20%. • Arranged interactive React elements with Lottie animations, achieving a 30% increase in user interaction and boosting session duration by 20% across the platform • Innovated design solutions and assisted in project management, leading to a 45% improvement in project completion time and Explored GitHub collaboration methods, enhancing team productivity by 80%",
     skills: [
-      "Leadership",
-      "Communication",
-      "Adaptability",
-      "Problem Solving",
-      "Financial Management",
-      "Time Management",
-      "Creativity",
-      "Risk Management",
-      "Team Management",
-      "Business Writing Skills",
+      "Vite + React JS",
+      "Canva",
+      "Next Js",
+      "Git",
+      "GitHub",
+      "JavaScript",
+      "Tailwind CSS",
+      "Material UI",
+      "Lottie animations,",
+      "Amazon Web Services",
     ],
-    doc: "https://internshala.com/company/muz-india-industries-1710329116/",
+    
   },
-  {
-    id: 0,
+
+    {
+    id: 2,
     img: "https://i.ibb.co/RCSjM27/coronavirus-4984935-640.png",
     role: "Freelancer",
-    company: "Fiverr",
+    company: "Fiverr, Upwork, Freelancer",
     date: "Aug 2023 - Present",
     desc: "Doing Projects to Improve My Skills",
     skills: [
@@ -189,10 +229,10 @@ export const experiences = [
       "PDF Editing",
       "ClipChamp",
     ],
-    doc: "#doc",
+
   },
   {
-    id: 1,
+    id: 3,
     img: "https://i.ibb.co/CM9c4pz/image.png",
     role: "Web Developer Intern",
     company: "Bharat IQ",
@@ -212,9 +252,31 @@ export const experiences = [
     ],
   },
   {
-    id: 2,
+    id: 4,
+    img: "https://i.ibb.co/82443bw/logo.png",
+    role: "Founder",
+    company: "MUZ India Industries",
+    date: "June 2021 - Present",
+    desc: "Handing Bidding, Human Resource, Finance, Accounting, & Other Day to Day Managing Work",
+    skills: [
+      "Leadership",
+      "Communication",
+      "Adaptability",
+      "Problem Solving",
+      "Financial Management",
+      "Time Management",
+      "Creativity",
+      "Risk Management",
+      "Team Management",
+      "Business Writing Skills",
+    ],
+    doc: "https://i.ibb.co/Sb58jfT/BANNER-MUZ-GST.png",
+  },
+
+  {
+    id: 5,
     img: "https://i.ibb.co/BZ2JN9f/43LOGO.jpg",
-    role: "General Manager",
+    role: "Executive Office Intern",
     company: "SPD International Infratech Private Limited",
     date: "June 2021 - Jul 2022",
     desc: "In this Start-up, I Managed HR, Accounts, Project, Finance, Tendering, Public Relation, Taxation Management.It gave me an opportunity to work in a collaborative team environment.",
@@ -231,12 +293,12 @@ export const experiences = [
       "Tally",
       "Nitro Pro",
     ],
-    doc: "#docs",
+
   },
   {
-    id: 3,
+    id: 6,
     img: "https://i.ibb.co/BZ2JN9f/43LOGO.jpg",
-    role: "Administartive Inter",
+    role: "AO Intern",
     company: "SPD International Infratech Private Limited",
     date: "Oct 2019 - May 2021",
     desc: "As an Admin Intern, I gained valuable hands-on experience in Business Managements. During my tenure, I contributed to the Overall Handling of Various Departments and Co-ordination Between Departments and Digitalization of Work/ Processes",
@@ -251,7 +313,6 @@ export const experiences = [
       "Document Management",
       "Report Generation",
     ],
-    doc: "#doc",
   },
 ];
 
@@ -271,7 +332,7 @@ export const education = [
     img: "https://i.ibb.co/H7mrvqX/masd.jpg",
     school: "MASD Public School,Panipat- Haryana, India",
     date: "Apr 2021 - Jul 2022",
-    grade: "81.2%",
+    grade: "80.6%",
     desc: "I completed my Class 12th High school education at MASD Public School,Panipat where I studied Physics, Chemistry & Math with Computer Science.",
     degree: "CBSE (XII), PCM with Computer Science",
   },
@@ -294,7 +355,7 @@ export const projects = [
     date: "Jan 2022 - Mar 2022",
     description:
       "Company Management System (CMS) is designed to automate the existing manual system with computerized equipment and software for billing management, employee database management, and payroll management.",
-    image: "",
+    image: "https://i.ibb.co/Sw4DdHNW/logo.png",
     tags: ["Python", "CSV", "File Handling"],
     category: "CLI App",
     github: "https://github.com/Pj-develop/Project_Python/",
@@ -306,7 +367,7 @@ export const projects = [
     title: "PyContact",
     date: "Oct 2023 - Oct 2023",
     description: "Developed a Contact Book in Python.",
-    image: "#IMG",
+    image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
     tags: ["Python", "Management"],
     category: "CLI app",
     github: "https://github.com/Pj-develop/PyContacts_KOC29_CipherSchools",
@@ -325,7 +386,7 @@ export const projects = [
     title: "WhatsApp Clone",
     date: "Dec 22 - Dec 22",
     description: "Designed and developed the Clone of WhatsApp Web",
-    image: "#projectimg",
+    image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
     tags: ["HTML", "CSS"],
     category: "web app",
     github: "https://github.com/Pj-develop/WhatsApp_Clone_WebProject/",
@@ -336,7 +397,7 @@ export const projects = [
     title: "Construction Website",
     date: "Nov 2022 - Dec 2022",
     description: "Developed a Construction Website for a Construction Company",
-    image: "#Projectimg",
+    image: "https://i.ibb.co/YtLFj7j/52490121961-ccf2fafdfd-w.jpg",
     tags: ["HTML", "CSS", "JavaScript"],
     category: "web app",
     github:
@@ -358,8 +419,8 @@ export const projects = [
     date: "NOV 2022 - NOV 2022",
     description:
       "Designed and developed the Clone of Tesla Website using HTML, CSS",
-    image: "#projectimg",
-    tags: ["HTML", "CSS"],
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+    tags: ["HTML", "CSS","JavaScript"],
     category: "web app",
     github: "https://github.com/Pj-develop/Tesla_KOC29_CipherSchools/",
     webapp: "https://github.com/Pj-develop/Tesla_KOC29_CipherSchools/",
@@ -370,7 +431,7 @@ export const projects = [
     date: "Feb 2023 - Apr 2023",
     description:
       "A Ace Organization Webiste for Showing their Organization Online Presence.",
-    image: "#projectimg",
+    image: "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
     tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     category: "web app",
     github: "https://github.com/Pj-develop/Ace_Website",
@@ -382,7 +443,7 @@ export const projects = [
     date: "May 2023",
     description:
       "Mother Soil, A React JS Website  to get the news about the Soil and spreading awareness about Soil .",
-    image: "#projectimg",
+    image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
     tags: ["React Js", "Tailwind CSS", "NewsAPI", "Node JS"],
     category: "web app",
     github: "https://github.com/Pj-develop/mothersoil/",
@@ -394,7 +455,7 @@ export const projects = [
     date: "Apr 2023",
     description:
       " A Web App to abolish the old menthod of Sign In and Login Using BlockChain using your CryptoWallet.",
-    image: "#projectimg",
+    image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
     tags: ["HTML", "CSS", "BootStrap", "MetaMask", "Blockchain"],
     category: "web app",
     github: "https://github.com/Pj-develop/Mint-logger",
@@ -406,7 +467,7 @@ export const projects = [
     date: "Apr 2023 - May 2023",
     description:
       "A simple react app that shows and demonstrate the Filtering of News Article using API. It uses the News API to fetch the data. It also has a Input Box to search for a particular Article.",
-    image: "#Prjctimg",
+    image: "https://nodejs.org/static/images/logo.svg",
     tags: ["React Js", "API", "News API"],
     category: "web app",
     github: "https://github.com/Pj-develop/news-guardians",
@@ -418,7 +479,7 @@ export const projects = [
     date: "Apr 2023 - May 2023",
     description:
       "Domain: Django Website ; Framework: Django, Scikit-Learn, Machine Learning Designed Django templates, rendered and Integrated with ML . Developed Algorithms and optimized input and trained ML Models with more than 26 lacs Instance and further used ChatGPT API & ClaimBuster API with Web scrapping using BeautifulSoup to get real time data from specified official sources . Further Mitigation of Fake News Concepts has been introduced for further development.",
-    image: "ProjectImg",
+    image: "https://i.ibb.co/VNtTSWx/179732494-d7788c4574-w.jpg",
     tags: [
       "Django",
       "Python",
@@ -432,11 +493,263 @@ export const projects = [
     github: "https://github.com/Pj-develop/ML_Model_Optimizers",
     webapp: "https://github.com/Pj-develop/ML_Model_Optimizers",
   },
+  {
+    id: 11,
+    title: "Hirez",
+    date: "Jan 2024 - Feb 2024",
+    description: "Designed Web Pages using Figma, React Components, and DFDs. • Composed web pages using React JS, integrated responsive design, and React components, reducing load times by 40%. • Utilized OpenAI services for enhanced document intelligence, streamlining hiring processes.",
+    image: "https://i.ibb.co/dwSYdrzk/image.png",
+    tags: ["React JS", "Node JS", "Azure Cloud Services", "Figma","OpenAI"],
+    category: "machine learning",
+    github:
+      "https://github.com/Pj-develop/Hirez",
+    webapp:
+      "https://hirez-eta.vercel.app/",
+    member: [
+      {
+        name: "Priyanshu Jha",
+        img: "https://avatars.githubusercontent.com/u/110783469?v=4",
+        linkedin: "https://www.linkedin.com/in/pjdevelop/",
+        github: "https://github.com/Pj-develop",
+      },
+    ],
+  },
+  {
+    id: 12,
+    title: "Buddy X",
+    date: "Dec 2024 - Dec 2024",
+    description: "A mobile application designed to help professionals capture action items, meeting details, and key discussion points during conversations. The app records live audio, transcribes it in real time using Deepgram's API, and organizes the content into actionable tasks and meeting notes. The solution leverages Expo for rapid mobile development and Supabase for backend services.",
+    image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+    tags: ["React Native JS", "Expo JS", "Git", "Ubuntu","Gemini AI"],
+    category: "CLI app",
+    github:
+      "https://github.com/Pj-develop/buddyx",
+    webapp:
+      "https://www.youtube.com/watch?v=LLvJLa591pw&feature=youtu.be",
+    member: [
+      {
+        name: "Priyanshu Jha",
+        img: "https://avatars.githubusercontent.com/u/110783469?v=4",
+        linkedin: "https://www.linkedin.com/in/pjdevelop/",
+        github: "https://github.com/Pj-develop",
+      },
+    ],
+  },
+  
+  {
+    id: 13,
+    title: "SpeakQ",
+    date: "Dec 2024 - Dec 2024",
+    description: "QuestSearch is a dynamic and user-friendly search interface for question databases. It supports various question types, filters, and pagination, providing an efficient way to query and manage question data. The project is built with a React frontend and a Node.js/Golang backend, communicating via gRPC. MongoDB is used for storage.",
+    image: "https://i.ibb.co/Sw4DdHNW/logo.png",
+    tags: ["React JS", "Node JS", "Tailwind CSS", "gRPC","MongoDB"],
+    category: "web app",
+    github:
+      "https://github.com/Pj-develop/speakq",
+    webapp:
+      "https://speakq1.onrender.com/",
+    member: [
+      {
+        name: "Priyanshu Jha",
+        img: "https://avatars.githubusercontent.com/u/110783469?v=4",
+        linkedin: "https://www.linkedin.com/in/pjdevelop/",
+        github: "https://github.com/Pj-develop",
+      },
+    ],
+  },
+  
+  {
+    id: 14,
+    title: "TONY",
+    date: "Oct 2024 - Mar 2025",
+    description: "Designed Web Pages using PHP and Laravel. This project provides a collection of resources, guides, and example code to help you get started with programming your TONY robot.",
+    image: "https://i.ibb.co/9m6GqwhZ/image.png",
+    tags: ["PHP", "Laravel", "IOT", "mySQL","Robotics"],
+    category: "web app",
+    github:
+      "https://github.com/Pj-develop/Tony_Codes/",
+    webapp:
+      "http://www.sih.ct.ws/",
+    member: [
+      {
+        name: "Priyanshu Jha",
+        img: "https://avatars.githubusercontent.com/u/110783469?v=4",
+        linkedin: "https://www.linkedin.com/in/pjdevelop/",
+        github: "https://github.com/Pj-develop",
+      },
+    ],
+  },
+  {
+    id: 15,
+    title: "Vendor Cab and Driver Onboarding System",
+    date: "Jan 2025 - Mar 2025",
+    description: "A comprehensive multi-level vendor management system for fleet operations, vehicle onboarding, and driver management with hierarchical access control.",
+    image: "https://i.ibb.co/B2QcLwyw/image.png",
+    tags: ["Next JS", "React JS", "MongoDB", "Tailwind CSS","Docker"],
+    category: "web app",
+    github:
+      "https://github.com/Pj-develop/VCDOS",
+    webapp:
+      "https://pj-develop.github.io/VCDOS",
+    member: [
+      {
+        name: "Priyanshu Jha",
+        img: "https://avatars.githubusercontent.com/u/110783469?v=4",
+        linkedin: "https://www.linkedin.com/in/pjdevelop/",
+        github: "https://github.com/Pj-develop",
+      },
+    ],
+  },
+  {
+    id: 16,
+    title: "EazeTap",
+    date: "Feb 2025 - Present",
+    description: "This project is a web application built with Next.js that allows users to upload files, manage their profiles, and create portfolios. It integrates with Cloudinary for file uploads and MongoDB for data storage.",
+    image: "https://i.ibb.co/hJwt5z8M/logo.jpg",
+    tags: ["Next JS", "Cloudinary", "MongoDB", "Docker","Gemini AI"],
+    category: "machine learning",
+    github:
+      "https://github.com/Pj-develop/eazepay",
+    webapp:
+      "https://eazepay.netlify.app/",
+    member: [
+      {
+        name: "Priyanshu Jha",
+        img: "https://avatars.githubusercontent.com/u/110783469?v=4",
+        linkedin: "https://www.linkedin.com/in/pjdevelop/",
+        github: "https://github.com/Pj-develop",
+      },
+    ],
+  },
 ];
 
-export const TimeLineData = [
-  { year: 2017, text: "Started my journey" },
-  { year: 2018, text: "Learnt Basic Computing " },
-  { year: 2019, text: "Learnt Offic Management Work " },
-  { year: 2020, text: "Learnt Coding in Python & Development" },
+// export const TimeLineData = [
+//   { year: 2017, text: "Started my journey" },
+//   { year: 2018, text: "Learnt Basic Computing " },
+//   { year: 2019, text: "Learnt Offic Management Work " },
+//   { year: 2020, text: "Learnt Coding in Python & Development" },
+// ];
+// Add these exports at the end of the file
+
+export const certifications = [
+  {
+    id: 1,
+    title: "DevOPS",
+    issuer: "Coursera",
+    date: "Mar 2025 - Mar 2025",
+    credentialId: "UNIQUEIDPJ",
+    credentialUrl: "https://www.linkedin.com/in/pjdevelop/details/certifications/",
+    logo: "https://i.ibb.co/kVs8XvkZ/cert.png"
+  },
+  {
+    id: 2,
+    title: "Introduction to MongoDB for Students",
+    issuer: "MongoDB",
+    date: "Feb 2025 - Mar 2025",
+    credentialId: "MDBnno90kiii7",
+    credentialUrl: "https://learn.mongodb.com/c/jJmhOH7zSUGGEyXBDPm8aA",
+    logo: "https://i.ibb.co/5v8HS3h/mongodb-logo.png"
+  },
+  {
+    id: 3,
+    title: "AI-Powered Chest Disease Detection and Classification",
+    issuer: "Coursera Project Network",
+    date: "Jun 2024",
+    credentialId: "Q4F37R6NYYTP",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/verify/Q4F37R6NYYTP",
+    logo: "https://i.ibb.co/gJHjMPB/coursera-logo.png" 
+  },
+  {
+    id: 4,
+    title: "NPTEL ONLINE CERTIFICATION IN CLOUD COMPUTING",
+    issuer: "NPTEL",
+    date: "Oct 2024",
+    skills: ["Cloud Computing", "Virtualization", "Networking","AWS", "Azure","Cloud Security"],
+    credentialId: "NPTEL24CS118S1670202017",
+    logo: "https://i.ibb.co/jPjgGNKm/image.png"
+  },
+  {
+    id: 5,
+    title: "edX Verified Certificate for Hardware and Operating Systems",
+    issuer: "edX",
+    date: "Jul 2023",
+    credentialId: "b196a957062a49e4933ff98a4189a9ff",
+    skills: ["Operating System", "Linux", "Networking", "Computer Hardware"],
+    logo: "https://i.ibb.co/4MdnDJ8/edx-logo.png"
+  },
+  {
+    id: 6,
+    title: "Leadership Through Social Influence",
+    issuer: "Coursera",
+    date: "May 2023",
+    credentialId: "KGDDKCA43Y8N",
+    skills: ["Team Management", "Leadership", "Social Influence"],
+    logo: "https://i.ibb.co/gJHjMPB/coursera-logo.png"
+  },
+  {
+    id: 7,
+    title: "Fundamentals of Management",
+    issuer: "Coursera",
+    date: "Mar 2023",
+    credentialId: "S5BDLHMVF5LP",
+    skills: ["Management", "Leadership", "Teamwork"],
+    logo: "https://i.ibb.co/gJHjMPB/coursera-logo.png"
+  },
+  {
+    id: 8,
+    title: "Become a Full-Stack Web Developer",
+    issuer: "LinkedIn",
+    date: "Feb 2023",
+    skills: ["Web-based Software Development", "Next Js"," React JS", "Node JS"],
+    logo: "https://i.ibb.co/SwHZZxP/linkedin-logo.png"
+  },
+  {
+    id: 9,
+    title: "CSS Essential Training",
+    issuer: "LinkedIn",
+    date: "Feb 2023",
+    skills: ["CSS, SCSS, SASS"],
+    logo: "https://i.ibb.co/SwHZZxP/linkedin-logo.png"
+  },
+  {
+    id: 10,
+    title: "Database Foundations: Intro to Databases",
+    issuer: "LinkedIn",
+    date: "Feb 2023",
+    logo: "https://i.ibb.co/SwHZZxP/linkedin-logo.png"
+  }
+];
+
+export const achievements = [
+  {
+    id: 1,
+    title: "Finalist – Smart India Hackathon 2024",
+    issuer: "Ministry of Education (Govt. of India)",
+    date: "Dec 2024",
+    organization: "Lovely Professional University",
+    description: "🏆 Awarded by the Ministry of Education's Innovation Cell for Project TONY, an open-source educational robot transforming STEM learning.\n\nKey Achievements:\n✅ Built TONY – A modular, programmable robot for hands-on robotics education.\n✅ Developed a Learning Platform – Using PHP Laravel & MySQL for interactive tutorials.\n✅ Recognized Nationally – Selected among 315 winning teams at SIH 2024 Grand Finale.\n✅ Validated by Experts – Endorsed by top evaluators and industry partners.",
+    image: "https://i.ibb.co/k60g9qWt/image.png",
+    projectName: "TONY",
+    teamName: "Team Reddix"
+  },
+  {
+    id: 2,
+    title: "Winner CipherThon 2.0 | National Level Hackathon",
+    issuer: "CipherSchools",
+    date: "Feb 2024",
+    description: "Proud to secure 1st place at CipherThon 2.0, a 24-hour national-level hackathon, with my team ByteBlazers! 🚀\n\nProject: HIREZ – AI-Based Hiring Platform\n\n✅ Built an AI-powered recruitment platform using RAG (Retrieval-Augmented Generation), VectorDB, Azure Cloud, and React.js.\n✅ Streamlined hiring processes by integrating OpenAI services for document intelligence.\n✅ Enhanced user experience with Figma-based UI design and React Components.\n✅ Reduced load times by 40% with optimized React.js web pages.",
+    image: "https://i.ibb.co/rKp8WQM7/image.png",
+    projectName: "Hirez",
+    teamName: "ByteBlazers"
+  },
+  {
+    id: 3,
+    title: "Winners- Rajasthan Police Hackathon 1.0",
+    issuer: "Rajasthan Police",
+    date: "Jan 2024",
+    description: "Our dynamic team, \"Hackstormers\" participated in Hackathon 1.0 by Rajasthan Police, showcasing our innovative skills and problem-solving mindset.\n\nOur solution was focused on the improvement of the 1930 Helpline, a crucial communication channel for reporting cybercrimes and freezing funds related to these crimes.\n- We have created an Automated Voice-Enabled System that allows users to file a Cyber Case through a Chatbot on the web portal built on Django Framework.\n- Our system leverages various Large Language Models to provide a Chatbot feature that can interact with the users and guide them through the process and acts like AI Legal Decision System.\n- Our system also uses our own trained data to enhance the performance and accuracy of the Chatbot and the Voice-Enabled System",
+    projectName: "1930 Helpine Improvement",
+    image: "https://i.ibb.co/NgFLr2vv/image.png",
+    teamName: "Hackstormers"
+  }
 ];
