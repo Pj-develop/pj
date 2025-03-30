@@ -6,7 +6,7 @@ export const Bio = {
     "UI/UX Designer",
     "AI & ML Enthusiast",
     "Freelancer",
-    "Polygot Developer",
+    "Polyglot Developer",
   ],
   description: " I will win not immediately, but definitely !! ",
   github: "https://github.com/Pj-develop/",
@@ -623,13 +623,7 @@ export const projects = [
   },
 ];
 
-// export const TimeLineData = [
-//   { year: 2017, text: "Started my journey" },
-//   { year: 2018, text: "Learnt Basic Computing " },
-//   { year: 2019, text: "Learnt Offic Management Work " },
-//   { year: 2020, text: "Learnt Coding in Python & Development" },
-// ];
-// Add these exports at the end of the file
+
 
 export const certifications = [
   {
