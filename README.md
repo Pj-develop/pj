@@ -4,7 +4,7 @@
 
 Welcome to my portfolio! This project showcases my skills, projects, and experiences as a web developer.
 
-### Weblink: [Live Website]( www.priyanshuj.me  )
+### Weblink: [Live Website](https://www.priyanshuj.me)
 
 ## Table of Contents
 
