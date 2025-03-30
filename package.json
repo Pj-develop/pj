@@ -1,7 +1,7 @@
 {
   "name": "priyanshu-jha-portfolio",
   "version": "0.2.0",
-  "homepage": "/pj",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",

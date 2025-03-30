@@ -16,10 +16,12 @@
     <meta name="keywords" content="Priyanshu Jha, software developer, full stack developer, Python, React, portfolio, web development, AI, ML" />
     <meta name="author" content="Priyanshu Jha" />
     <meta name="theme-color" content="#854CE6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
 
     <link rel="canonical" href="%PUBLIC_URL%" />
-    <link rel="icon" href="%PUBLIC_URL%/pj.jpg" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/pj.jpg" />
+    <link rel="icon" href="pj.jpg" />
+<link rel="apple-touch-icon" href="pj.jpg" />
     
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website" />
@@ -49,15 +51,29 @@
     
     <!-- Color Scheme Preference -->
     <meta name="color-scheme" content="dark light" />
+
     
+    <script type="text/javascript">
+      // Handle paths on both GitHub Pages and custom domain
+      (function() {
+        // Check if we're on GitHub Pages or custom domain
+        var isGitHubPages = window.location.hostname.includes('github.io');
+        var basePath = isGitHubPages ? '/pj/' : '/'; // <-- CHANGE HERE
+        
+        // Dynamically set base tag for proper resource loading
+        var base = document.createElement('base');
+        base.href = basePath;
+        document.head.prepend(base);
+      })();
+    </script>
     <!-- Structured Data for Personal Profile -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Priyanshu Jha",
-        "url": "https://priyanshuj.me/pj/",
-        "image": "%PUBLIC_URL%/pj.jpg",
+        "url": "https://priyanshuj.me/", <!-- REMOVE /pj/ HERE -->
+        "image": "pj.jpg",
         "sameAs": [
           "https://github.com/Pj-develop/",
           "https://www.linkedin.com/in/pjdevelop/",

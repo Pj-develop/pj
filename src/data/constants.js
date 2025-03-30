@@ -648,7 +648,7 @@ export const certifications = [
     date: "Feb 2025 - Mar 2025",
     credentialId: "MDBnno90kiii7",
     credentialUrl: "https://learn.mongodb.com/c/jJmhOH7zSUGGEyXBDPm8aA",
-    logo: "https://i.ibb.co/5v8HS3h/mongodb-logo.png"
+    logo: "https://i.ibb.co/G3p9Z13V/image.png"
   },
   {
     id: 3,
@@ -657,7 +657,7 @@ export const certifications = [
     date: "Jun 2024",
     credentialId: "Q4F37R6NYYTP",
     credentialUrl: "https://www.coursera.org/account/accomplishments/verify/Q4F37R6NYYTP",
-    logo: "https://i.ibb.co/gJHjMPB/coursera-logo.png" 
+    logo: "https://i.ibb.co/1JZhv6Yd/coursera.jpg" 
   },
   {
     id: 4,
@@ -670,12 +670,12 @@ export const certifications = [
   },
   {
     id: 5,
-    title: "edX Verified Certificate for Hardware and Operating Systems",
-    issuer: "edX",
+    title: "IBM Verified Certificate for Hardware and Operating Systems",
+    issuer: "IBM",
     date: "Jul 2023",
     credentialId: "b196a957062a49e4933ff98a4189a9ff",
     skills: ["Operating System", "Linux", "Networking", "Computer Hardware"],
-    logo: "https://i.ibb.co/4MdnDJ8/edx-logo.png"
+    logo: "https://i.ibb.co/TD90wjYk/ibm.png"
   },
   {
     id: 6,
@@ -684,7 +684,7 @@ export const certifications = [
     date: "May 2023",
     credentialId: "KGDDKCA43Y8N",
     skills: ["Team Management", "Leadership", "Social Influence"],
-    logo: "https://i.ibb.co/gJHjMPB/coursera-logo.png"
+    logo: "https://i.ibb.co/1JZhv6Yd/coursera.jpg"
   },
   {
     id: 7,
@@ -693,7 +693,7 @@ export const certifications = [
     date: "Mar 2023",
     credentialId: "S5BDLHMVF5LP",
     skills: ["Management", "Leadership", "Teamwork"],
-    logo: "https://i.ibb.co/gJHjMPB/coursera-logo.png"
+    logo: "https://i.ibb.co/1JZhv6Yd/coursera.jpg"
   },
   {
     id: 8,
@@ -701,7 +701,7 @@ export const certifications = [
     issuer: "LinkedIn",
     date: "Feb 2023",
     skills: ["Web-based Software Development", "Next Js"," React JS", "Node JS"],
-    logo: "https://i.ibb.co/SwHZZxP/linkedin-logo.png"
+    logo: "https://i.ibb.co/xpHjLQ3/linked.jpg"
   },
   {
     id: 9,
@@ -709,14 +709,14 @@ export const certifications = [
     issuer: "LinkedIn",
     date: "Feb 2023",
     skills: ["CSS, SCSS, SASS"],
-    logo: "https://i.ibb.co/SwHZZxP/linkedin-logo.png"
+    logo: "https://i.ibb.co/xpHjLQ3/linked.jpg"
   },
   {
     id: 10,
     title: "Database Foundations: Intro to Databases",
     issuer: "LinkedIn",
     date: "Feb 2023",
-    logo: "https://i.ibb.co/SwHZZxP/linkedin-logo.png"
+    logo: "https://i.ibb.co/xpHjLQ3/linked.jpg"
   }
 ];
 
