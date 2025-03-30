@@ -1,9 +1,10 @@
 # My Portfolio
 
+![My Picture](public/pj.jpg)
+
 Welcome to my portfolio! This project showcases my skills, projects, and experiences as a web developer.
 
 ### Weblink: [Live Website]( www.priyanshuj.me  )
-
 
 ## Table of Contents
 
