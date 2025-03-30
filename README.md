@@ -2,16 +2,8 @@
 
 Welcome to my portfolio! This project showcases my skills, projects, and experiences as a web developer.
 
-### Weblink: [Live Website]( NOT DEPLOYED )
+### Weblink: [Live Website]( www.priyanshuj.me  )
 
-## Some Images:
-
-<img width="450px;" src="img"/>
-<img width="450px;" src="img"/>
-<img width="450px;" src="img"/>
-<img width="450px;" src="img"/>
-<img width="450px;" src="img"/>
-<img width="450px;" src="httpsimg"/>
 
 ## Table of Contents
 
