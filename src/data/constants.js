@@ -6,7 +6,7 @@ export const Bio = {
     "UI/UX Designer",
     "AI & ML Enthusiast",
     "Freelancer",
-    "Polgot Developer",
+    "Polygot Developer",
   ],
   description: " I will win not immediately, but definitely !! ",
   github: "https://github.com/Pj-develop/",
