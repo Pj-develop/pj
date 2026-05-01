@@ -64,10 +64,6 @@ jobs:
             writeJson("src/content/experiences.json", { items: payload.experiences });
             writeJson("src/content/projects.json", { items: payload.projects });
 
-            writeJson("public/content/bio.json", payload.Bio);
-            writeJson("public/content/experiences.json", { items: payload.experiences });
-            writeJson("public/content/projects.json", { items: payload.projects });
-
       - name: Create pull request
         uses: peter-evans/create-pull-request@v6
         with:
@@ -78,7 +74,7 @@ jobs:
           body: |
             ## Summary
             - Applies `Bio`, `experiences`, and `projects` from the admin payload.
-            - Updates both `src/content/*` and `public/content/*`.
+            - Updates `src/content/*`.
 
             ## Trigger
             Manually triggered via GitHub Actions `workflow_dispatch`.

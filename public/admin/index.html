@@ -128,10 +128,11 @@
         };
 
         const loadDefaults = async () => {
+          const RAW_BASE = "https://raw.githubusercontent.com/Pj-develop/pj/main/src/content";
           const [bio, exp, proj] = await Promise.all([
-            fetch("../content/bio.json").then((r) => r.json()),
-            fetch("../content/experiences.json").then((r) => r.json()),
-            fetch("../content/projects.json").then((r) => r.json())
+            fetch(`${RAW_BASE}/bio.json`).then((r) => r.json()),
+            fetch(`${RAW_BASE}/experiences.json`).then((r) => r.json()),
+            fetch(`${RAW_BASE}/projects.json`).then((r) => r.json())
           ]);
           defaults = { Bio: bio, experiences: exp.items, projects: proj.items };
         };
@@ -153,7 +154,12 @@
         };
 
         const showEditor = async () => {
-          await loadDefaults();
+          try {
+            await loadDefaults();
+          } catch (error) {
+            setMsg(loginMsg, "Could not load defaults from GitHub src/content. Try again.", true);
+            return;
+          }
           loginCard.classList.add("hidden");
           editorCard.classList.remove("hidden");
           hydrateEditor();
