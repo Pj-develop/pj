@@ -12,7 +12,7 @@ export const Bio = {
   github: "https://github.com/Pj-develop/",
   linktree: "https://linktr.ee/priyanshu.j",
   resume:
-    "https://drive.google.com/file/d/1M_63miO4hfBPfAxWDPdiQLD9_MQPe-2a/view?usp=sharing",
+    "https://drive.google.com/file/d/1x8qF5i2-mtAvFis-MhdwMFzZgrCT9eph/view",
   linkedin: "https://www.linkedin.com/in/pjdevelop/",
   twitter: "https://twitter.com/Priyanshujha_",
   insta: "https://instagram.com/pjdevelop",
