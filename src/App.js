@@ -1,5 +1,5 @@
 import { ThemeProvider } from "styled-components";
-import { useState } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { darkTheme, lightTheme } from "./utils/Themes.js";
 import Navbar from "./components/Navbar";
 import "./App.css";
@@ -11,10 +11,11 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
-import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
 import Achievements from "./components/Achievements/Achievements.jsx";
 import Certifications from "./components/Certification/Certification.jsx";
+
+const ProjectDetails = lazy(() => import("./components/ProjectDetails"));
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -37,15 +38,22 @@ const Wrapper = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
 function App() {
-  // eslint-disable-next-line no-unused-vars
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window === "undefined") return true;
+    const savedMode = window.localStorage.getItem("portfolio-theme");
+    return savedMode ? savedMode === "dark" : true;
+  });
   const [openModal, setOpenModal] = useState({ state: false, project: null });
-  // console.log(openModal);
+
+  useEffect(() => {
+    window.localStorage.setItem("portfolio-theme", darkMode ? "dark" : "light");
+  }, [darkMode]);
+
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Router>
-        <Navbar />
-        <Body>
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Body as="main" id="main-content">
           <HeroSection />
           <Wrapper>
             <Skills />
@@ -62,7 +70,9 @@ function App() {
           
           <Footer />
           {openModal.state && (
-            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+            <Suspense fallback={null}>
+              <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+            </Suspense>
           )}
         </Body>
       </Router>

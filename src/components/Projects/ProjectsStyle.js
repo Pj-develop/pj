@@ -103,3 +103,19 @@ export const CardContainer = styled.div`
     //     grid-template-columns: repeat(1, 1fr);
     // }
 `;
+
+export const MoreButton = styled.button`
+    margin-top: 8px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid ${({ theme }) => theme.primary};
+    background: ${({ theme }) => theme.primary + 12};
+    color: ${({ theme }) => theme.text_primary};
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        background: ${({ theme }) => theme.primary + 24};
+        transform: translateY(-1px);
+    }
+`;

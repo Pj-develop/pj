@@ -12,7 +12,7 @@ export const Nav = styled.div`
     top: 0;
     z-index: 10;
     @media (max-width: 960px) {
-        trastion: 0.8s all ease;
+        transition: 0.8s all ease;
     }
 `;
 export const NavbarContainer = styled.div`
@@ -24,6 +24,7 @@ export const NavbarContainer = styled.div`
   width: 100%;
   padding: 0 24px;
   max-width: 1200px;
+  gap: 16px;
 `;
 
 export const NavLogo = styled(LinkR)`
@@ -39,11 +40,12 @@ export const NavLogo = styled(LinkR)`
 `;
 export const Span = styled.div`
     padding: 0 4px;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 16px;
+    color: ${({ theme }) => theme.text_primary};
 `;
 export const NavItems = styled.ul`
-    width: 100%;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content:center;
@@ -96,12 +98,35 @@ export const GitHubButton = styled.a`
 `;
 
 export const ButtonContainer = styled.div`
-  width: 80%;  
+  width: auto;  
   height: 100%;
   display: flex;
   justify-content: end;
   align-items: center;
+  gap: 12px;
   padding: 0 6px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const ThemeToggle = styled.button`
+  border: 1.8px solid ${({ theme }) => theme.primary};
+  background: ${({ theme }) => theme.card};
+  color: ${({ theme }) => theme.text_primary};
+  border-radius: 999px;
+  width: 38px;
+  height: 38px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    transform: translateY(-1px);
+    background: ${({ theme }) => theme.primary + 20};
+  }
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -186,6 +211,24 @@ export const MobileMenuButton = styled.a`
   :hover {
     background: ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.white};
+  }
+`;
+
+export const MobileThemeToggle = styled.button`
+  border: 1.8px solid ${({ theme }) => theme.primary};
+  background: ${({ theme }) => theme.card};
+  color: ${({ theme }) => theme.text_primary};
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background: ${({ theme }) => theme.primary + 20};
   }
 `;
 

@@ -21,7 +21,7 @@ const Card = styled.div`
     background-color: ${({ theme }) => theme.card};
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
     overflow: hidden;
     padding: 26px 20px;
     display: flex;
@@ -30,11 +30,17 @@ const Card = styled.div`
     transition: all 0.5s ease-in-out;
     &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
-        filter: brightness(1.1);
+        box-shadow: 0 16px 28px rgba(0,0,0,0.2);
+        filter: brightness(1.03);
     }
     &:hover ${Button} {
         display: block;
+    }
+    @media only screen and (max-width: 768px){
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      min-height: 460px;
     }
 `
 
@@ -43,7 +49,41 @@ const Image = styled.img`
     height: 180px;
     background-color: ${({ theme }) => theme.white};
     border-radius: 10px;
-    box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    object-fit: cover;
+`
+const Thumb = styled.div`
+    position: relative;
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(120deg, ${({ theme }) => theme.bgLight}, ${({ theme }) => theme.card_light});
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+`
+const DefaultThumb = styled.div`
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 14px;
+    background: ${({ theme }) =>
+      theme.isDark ? theme.black + "66" : theme.white + "b8"};
+    backdrop-filter: blur(8px);
+`
+const ThumbTitle = styled.div`
+    width: 100%;
+    text-align: center;
+    color: ${({ theme }) => (theme.isDark ? theme.white : theme.text_primary)};
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: ${({ theme }) =>
+      theme.isDark ? theme.black + "55" : theme.white + "dd"};
+    border: 1px solid ${({ theme }) => theme.primary + "55"};
+    text-transform: capitalize;
 `
 
 const Tags = styled.div`
@@ -123,9 +163,36 @@ const Avatar = styled.img`
 `
 
 const ProjectCards = ({project, setOpenModal}) => {
+    const imgSrc = project.image;
+    const forceFallbackIds = new Set([201, 203, 204, 205, 206]);
+    const isPlaceholderImage =
+      typeof imgSrc === "string" &&
+      imgSrc.includes("i.ibb.co/Sw4DdHNW/logo.png");
+    const hasValidImage =
+      Boolean(imgSrc) && !forceFallbackIds.has(project.id) && !isPlaceholderImage;
+
+    const [imageFailed, setImageFailed] = React.useState(false);
+
+    React.useEffect(() => {
+      setImageFailed(false);
+    }, [imgSrc, project.id]);
+
+    const showImage = hasValidImage && !imageFailed;
     return (
         <Card onClick={() => setOpenModal({state: true, project: project})}>
-            <Image src={project.image}/>
+            {showImage ? (
+              <Image
+                src={imgSrc}
+                onError={() => setImageFailed(true)}
+                loading="lazy"
+              />
+            ) : (
+              <Thumb>
+                <DefaultThumb>
+                  <ThumbTitle>{project.title}</ThumbTitle>
+                </DefaultThumb>
+              </Thumb>
+            )}
             <Tags>
                 {project.tags?.map((tag, index) => (
                     <Tag key={index}>{tag}</Tag>

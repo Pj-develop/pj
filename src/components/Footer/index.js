@@ -14,8 +14,12 @@ const FooterContainer = styled.div`
   padding: 2rem 0;
   display: flex;
   justify-content: center;
-  background: linear-gradient(180deg, rgba(17, 17, 17, 0.8) 0%, rgba(35, 35, 35, 1) 100%);
-  box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    180deg,
+    ${({ theme }) => theme.card_light} 0%,
+    ${({ theme }) => theme.card} 100%
+  );
+  box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.08);
   margin-top: 2rem;
 `;
 
@@ -40,6 +44,20 @@ const Logo = styled.h1`
   &:hover {
     transform: scale(1.05);
   }
+`;
+
+const LogoRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+const LogoAvatar = styled.img`
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid ${({ theme }) => theme.primary};
 `;
 
 const Divider = styled.div`
@@ -125,7 +143,7 @@ const SocialMediaIcon = styled.a`
   &:hover {
     color: ${({ theme }) => theme.primary};
     transform: translateY(-5px);
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: ${({ theme }) => theme.primary + "14"};
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
 `;
@@ -146,7 +164,7 @@ const ViewerCount = styled.div`
   margin-top: 1rem;
   padding: 6px 12px;
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: ${({ theme }) => theme.primary + "14"};
   
   svg {
     color: ${({ theme }) => theme.primary};
@@ -177,7 +195,10 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>Priyanshu Jha</Logo>
+        <LogoRow>
+          <LogoAvatar src={Bio.brandIcon || Bio.profileImage} alt="Profile icon" />
+          <Logo>Priyanshu Jha</Logo>
+        </LogoRow>
         <Divider />
         <Nav>
           <NavLink href="#about">About</NavLink>

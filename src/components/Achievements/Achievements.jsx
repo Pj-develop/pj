@@ -57,7 +57,7 @@ const AchievementCard = styled.div`
   width: 100%;
   background-color: ${({ theme }) => theme.card};
   border-radius: 16px;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
   padding: 20px;
   margin-bottom: 28px;
   cursor: pointer;
@@ -70,7 +70,7 @@ const AchievementCard = styled.div`
   
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.14);
     
     &::before {
       width: 100%;
@@ -121,6 +121,25 @@ const AchievementImage = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+`;
+
+const FallbackImage = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 12px;
+  color: ${({ theme }) => (theme.isDark ? theme.white : theme.text_primary)};
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(
+    120deg,
+    ${({ theme }) => theme.bgLight},
+    ${({ theme }) => (theme.isDark ? theme.card_light : theme.white)}
+  );
+  border: 1px solid ${({ theme }) => theme.primary + "45"};
 `;
 
 const AchievementInfo = styled.div`
@@ -202,6 +221,34 @@ const Description = styled.div`
   }
 `;
 
+const AchievementMedia = ({ image, title }) => {
+  const isPlaceholderImage =
+    typeof image === "string" &&
+    image.includes("i.ibb.co/Sw4DdHNW/logo.png");
+  const hasValidImage = Boolean(image) && !isPlaceholderImage;
+  const [imageFailed, setImageFailed] = React.useState(false);
+
+  React.useEffect(() => {
+    setImageFailed(false);
+  }, [image]);
+
+  const showImage = hasValidImage && !imageFailed;
+  return (
+    <ImageContainer>
+      {showImage ? (
+        <AchievementImage
+          src={image}
+          alt={title}
+          onError={() => setImageFailed(true)}
+          loading="lazy"
+        />
+      ) : (
+        <FallbackImage>{title}</FallbackImage>
+      )}
+    </ImageContainer>
+  );
+};
+
 const Achievements = () => {
   return (
     <AchievementsContainer id="achievements">
@@ -215,11 +262,7 @@ const Achievements = () => {
           <Fade direction="up" key={achievement.id} triggerOnce>
             <AchievementCard>
               <AchievementHeader>
-                {achievement.image && (
-                  <ImageContainer>
-                    <AchievementImage src={achievement.image} alt={achievement.title} />
-                  </ImageContainer>
-                )}
+                <AchievementMedia image={achievement.image} title={achievement.title} />
                 
                 <AchievementInfo>
                   <AchievementTitle>

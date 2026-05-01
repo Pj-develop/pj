@@ -1,16 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Document = styled.img`
-    display: none;
-    height: 70px;
+const DocumentButton = styled.a`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: fit-content;
-    background-color: #000;
+    padding: 10px 14px;
     border-radius: 10px;
+    border: 1px solid ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.primary};
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
     &:hover{
-        cursor: pointer;
-        opacity: 0.8;
+        background: ${({ theme }) => theme.primary};
+        color: ${({ theme }) => theme.white};
     }
+`
+
+const ActionRow = styled.div`
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 `
 
 const Description = styled.div`
@@ -53,10 +66,6 @@ const Card = styled.div`
         padding: 10px;
         gap: 8px;
         width: 300px;
-    }
-
-    &:hover ${Document}{
-        display: flex;
     }
 
     &:hover ${Span}{
@@ -173,11 +182,18 @@ const ExperienceCard = ({ experience }) => {
                     </>
                 }
             </Description>
-            {experience.doc &&
-                <a href={experience.doc} target="new">
-                    <Document src={experience.doc} />
-                </a>
-            }
+            <ActionRow>
+                {experience.github && (
+                    <DocumentButton href={experience.github} target="_blank" rel="noopener noreferrer">
+                        View GitHub
+                    </DocumentButton>
+                )}
+                {experience.doc && (
+                    <DocumentButton href={experience.doc} target="_blank" rel="noopener noreferrer">
+                        View Certificate
+                    </DocumentButton>
+                )}
+            </ActionRow>
         </Card>
     )
 }

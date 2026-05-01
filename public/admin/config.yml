@@ -1,0 +1,107 @@
+backend:
+  name: github
+  repo: Pj-develop/pj
+  branch: main
+
+local_backend: true
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: bio
+    label: Bio
+    files:
+      - name: profile
+        label: Profile
+        file: src/content/bio.json
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Roles, name: roles, widget: list }
+          - { label: Description, name: description, widget: text }
+          - { label: Phone, name: phone, widget: string, required: false }
+          - { label: Email, name: email, widget: string, required: false }
+          - { label: Resume, name: resume, widget: string }
+          - { label: GitHub, name: github, widget: string }
+          - { label: GitHub Omniful, name: githubOmniful, widget: string, required: false }
+          - { label: LinkedIn, name: linkedin, widget: string }
+          - { label: Linktree, name: linktree, widget: string, required: false }
+
+  - name: experiences
+    label: Experiences
+    files:
+      - name: items
+        label: Experience Items
+        file: src/content/experiences.json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            summary: '{{fields.role}} @ {{fields.company}}'
+            fields:
+              - { label: ID, name: id, widget: number }
+              - { label: Image URL, name: img, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: Company, name: company, widget: string }
+              - { label: Date, name: date, widget: string }
+              - { label: Description, name: desc, widget: text }
+              - { label: Skills, name: skills, widget: list }
+              - { label: Document URL, name: doc, widget: string, required: false }
+
+  - name: projects
+    label: Projects
+    files:
+      - name: items
+        label: Project Items
+        file: src/content/projects.json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: ID, name: id, widget: number }
+              - { label: Title, name: title, widget: string }
+              - { label: Date, name: date, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Image URL, name: image, widget: string }
+              - { label: Tags, name: tags, widget: list }
+              - { label: Category, name: category, widget: string }
+              - { label: GitHub, name: github, widget: string, required: false }
+              - { label: Webapp, name: webapp, widget: string, required: false }
+
+  - name: education
+    label: Education
+    files:
+      - name: items
+        label: Education Items
+        file: src/content/education.json
+        fields:
+          - { label: Items, name: items, widget: list }
+
+  - name: skills
+    label: Skills
+    files:
+      - name: items
+        label: Skill Groups
+        file: src/content/skills.json
+        fields:
+          - { label: Items, name: items, widget: list }
+
+  - name: achievements
+    label: Achievements
+    files:
+      - name: items
+        label: Achievement Items
+        file: src/content/achievements.json
+        fields:
+          - { label: Items, name: items, widget: list }
+
+  - name: certifications
+    label: Certifications
+    files:
+      - name: items
+        label: Certification Items
+        file: src/content/certifications.json
+        fields:
+          - { label: Items, name: items, widget: list }

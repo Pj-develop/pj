@@ -1,101 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Character set and viewport settings -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    
-    <!-- Preconnect to critical domains -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Primary Meta Tags -->
+
     <title>Priyanshu Jha | Full Stack Developer & Software Engineer</title>
     <meta name="title" content="Priyanshu Jha | Full Stack Developer & Software Engineer" />
-    <meta name="description" content="Portfolio of Priyanshu Jha - Software Developer, Full Stack Engineer, Python Developer, and UI/UX Designer specialized in modern web technologies & AI solutions." />
+    <meta name="description" content="Portfolio of Priyanshu Jha - Software Developer, Full Stack Engineer, Python Developer, and AI builder specialized in modern web technologies." />
     <meta name="keywords" content="Priyanshu Jha, software developer, full stack developer, Python, React, portfolio, web development, AI, ML" />
     <meta name="author" content="Priyanshu Jha" />
     <meta name="theme-color" content="#854CE6" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="mobile-web-app-capable" content="yes" />
 
-    <link rel="canonical" href="%PUBLIC_URL%" />
-    <link rel="icon" href="pj.jpg" />
-<link rel="apple-touch-icon" href="pj.jpg" />
-    
-    <!-- Open Graph / Facebook Meta Tags -->
+    <link rel="canonical" id="canonical-link" href="" />
+    <link rel="icon" href="https://i.ibb.co/wFmMQF7V/Gemini-Generated-Image-jaylgajaylgajayl.png" />
+    <link rel="apple-touch-icon" href="https://i.ibb.co/wFmMQF7V/Gemini-Generated-Image-jaylgajaylgajayl.png" />
+
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="%PUBLIC_URL%" />
+    <meta property="og:url" id="og-url" content="" />
     <meta property="og:title" content="Priyanshu Jha | Full Stack Developer & Software Engineer" />
-    <meta property="og:description" content="Portfolio of Priyanshu Jha - Software Developer, Full Stack Engineer, Python Developer, and UI/UX Designer specialized in modern web technologies & AI solutions." />
-    <meta property="og:image" content="%PUBLIC_URL%/pj.jpg" />
-    
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="%PUBLIC_URL%" />
-    <meta name="twitter:title" content="Priyanshu Jha | Full Stack Developer & Software Engineer" />
-    <meta name="twitter:description" content="Portfolio of Priyanshu Jha - Software Developer, Full Stack Engineer, Python Developer, and UI/UX Designer specialized in modern web technologies & AI solutions." />
-    <meta name="twitter:image" content="%PUBLIC_URL%/pj.jpg" />
-    
-  
-    
-   
-    <!-- Mobile App Meta -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="Priyanshu Jha" />
-    <meta name="application-name" content="Priyanshu Jha" />
-    
-    <!-- Manifest -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
-    <!-- Color Scheme Preference -->
-    <meta name="color-scheme" content="dark light" />
+    <meta property="og:description" content="Portfolio of Priyanshu Jha - Software Developer, Full Stack Engineer, Python Developer, and AI builder specialized in modern web technologies." />
+    <meta property="og:image" id="og-image" content="" />
 
-    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" id="twitter-url" content="" />
+    <meta name="twitter:title" content="Priyanshu Jha | Full Stack Developer & Software Engineer" />
+    <meta name="twitter:description" content="Portfolio of Priyanshu Jha - Software Developer, Full Stack Engineer, Python Developer, and AI builder specialized in modern web technologies." />
+    <meta name="twitter:image" id="twitter-image" content="" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
     <script type="text/javascript">
-      // Handle paths on both GitHub Pages and custom domain
-      (function() {
-        // Check if we're on GitHub Pages or custom domain
-        var isGitHubPages = window.location.hostname.includes('github.io');
-        var basePath = isGitHubPages ? '/pj/' : '/'; // <-- CHANGE HERE
-        
-        // Dynamically set base tag for proper resource loading
-        var base = document.createElement('base');
+      (function () {
+        var isGitHubPages = window.location.hostname.includes("github.io");
+        var basePath = isGitHubPages ? "/pj/" : "/";
+        var siteUrl = window.location.origin + basePath;
+        var base = document.createElement("base");
         base.href = basePath;
         document.head.prepend(base);
+
+        var canonical = document.getElementById("canonical-link");
+        var ogUrl = document.getElementById("og-url");
+        var ogImage = document.getElementById("og-image");
+        var twitterUrl = document.getElementById("twitter-url");
+        var twitterImage = document.getElementById("twitter-image");
+        var ldJson = document.getElementById("person-jsonld");
+
+        if (canonical) canonical.setAttribute("href", siteUrl);
+        if (ogUrl) ogUrl.setAttribute("content", siteUrl);
+        if (ogImage) ogImage.setAttribute("content", "https://i.ibb.co/8vNrp01/Gemini-Generated-Image-qatgpeqatgpeqatg.png");
+        if (twitterUrl) twitterUrl.setAttribute("content", siteUrl);
+        if (twitterImage) twitterImage.setAttribute("content", "https://i.ibb.co/8vNrp01/Gemini-Generated-Image-qatgpeqatgpeqatg.png");
+
+        if (ldJson) {
+          ldJson.textContent = JSON.stringify(
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Priyanshu Jha",
+              url: siteUrl,
+              image: "https://i.ibb.co/8vNrp01/Gemini-Generated-Image-qatgpeqatgpeqatg.png",
+              sameAs: [
+                "https://github.com/Pj-develop/",
+                "https://www.linkedin.com/in/pjdevelop/",
+                "https://twitter.com/Priyanshujha_",
+                "https://instagram.com/pjdevelop"
+              ],
+              jobTitle: "Software Developer",
+              worksFor: {
+                "@type": "Organization",
+                name: "MUZ India Industries"
+              }
+            },
+            null,
+            2
+          );
+        }
       })();
     </script>
-    <!-- Structured Data for Personal Profile -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Priyanshu Jha",
-        "url": "https://priyanshuj.me/", <!-- REMOVE /pj/ HERE -->
-        "image": "pj.jpg",
-        "sameAs": [
-          "https://github.com/Pj-develop/",
-          "https://www.linkedin.com/in/pjdevelop/",
-          "https://twitter.com/Priyanshujha_",
-          "https://instagram.com/pjdevelop"
-        ],
-        "jobTitle": "Software Developer",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "MUZ India Industries"
-        }
-      }
-    </script>
-    
-    <!-- Font Preloading (Add specific font URLs) -->
+
+    <script id="person-jsonld" type="application/ld+json">{}</script>
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="f3e9d20f-1683-4693-938c-05ebbd03da11"></script>
+
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" /></noscript>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    
-    
   </body>
 </html>

@@ -1,30 +1,29 @@
 import React from 'react'
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileLink } from './NavbarStyledComponent'
-import { DiCssdeck } from 'react-icons/di';
+import {
+  Nav,
+  NavLink,
+  NavbarContainer,
+  NavItems,
+  GitHubButton,
+  ButtonContainer,
+  MobileIcon,
+  MobileMenu,
+  MobileLink,
+  ThemeToggle,
+  MobileThemeToggle,
+} from './NavbarStyledComponent'
 import { FaBars } from 'react-icons/fa';
+import { FiMoon, FiSun } from 'react-icons/fi';
 import { Bio } from '../../data/constants';
-import _default from '../../themes/default';
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const theme = _default;
   
   const toggleMenu = () => setIsOpen(!isOpen);
   
   return (
     <Nav>
       <NavbarContainer>
-        {/* Fixed nested anchor issue by using NavLogo properly */}
-        <NavLogo to="/" style={{ 
-            display: "flex", 
-            alignItems: "center", 
-            color: "white", 
-            marginBottom: '20px', 
-            cursor: 'pointer',
-            textDecoration: 'none'
-          }}>
-          <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
-        </NavLogo>
         <MobileIcon>
           <FaBars onClick={toggleMenu} />
         </MobileIcon>
@@ -36,6 +35,13 @@ const Navbar = () => {
           <NavLink href='#education'>Education</NavLink>
         </NavItems>
         <ButtonContainer>
+          <ThemeToggle
+            onClick={() => setDarkMode((prev) => !prev)}
+            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+            title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {darkMode ? <FiSun size={18} /> : <FiMoon size={18} />}
+          </ThemeToggle>
           <GitHubButton href={Bio.github} target="_blank" rel="noopener noreferrer">
             Github Profile
           </GitHubButton>
@@ -47,13 +53,17 @@ const Navbar = () => {
             <MobileLink href='#experience' onClick={toggleMenu}>Experience</MobileLink>
             <MobileLink href='#projects' onClick={toggleMenu}>Projects</MobileLink>
             <MobileLink href='#education' onClick={toggleMenu}>Education</MobileLink>
+            <MobileThemeToggle
+              onClick={() => setDarkMode((prev) => !prev)}
+              aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+            >
+              {darkMode ? <FiSun size={18} /> : <FiMoon size={18} />}
+            </MobileThemeToggle>
             <GitHubButton 
               style={{
                 padding: '10px 16px',
-                background: theme.primary || theme.colors.primary1,
-                color: 'white',
                 width: 'max-content'
-              }} 
+              }}
               href={Bio.github} 
               target="_blank"
               rel="noopener noreferrer">

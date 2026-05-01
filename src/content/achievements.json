@@ -1,0 +1,45 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Finalist – Smart India Hackathon 2024",
+      "issuer": "Ministry of Education (Govt. of India)",
+      "date": "Dec 2024",
+      "organization": "Lovely Professional University",
+      "description": "🏆 Awarded by the Ministry of Education's Innovation Cell for Project TONY, an open-source educational robot transforming STEM learning.\n\nKey Achievements:\n✅ Built TONY – A modular, programmable robot for hands-on robotics education.\n✅ Developed a Learning Platform – Using PHP Laravel & MySQL for interactive tutorials.\n✅ Recognized Nationally – Selected among 315 winning teams at SIH 2024 Grand Finale.\n✅ Validated by Experts – Endorsed by top evaluators and industry partners.",
+      "image": "https://i.ibb.co/k60g9qWt/image.png",
+      "projectName": "TONY",
+      "teamName": "Team Reddix"
+    },
+    {
+      "id": 2,
+      "title": "Winner CipherThon 2.0 | National Level Hackathon",
+      "issuer": "CipherSchools",
+      "date": "Feb 2024",
+      "description": "Proud to secure 1st place at CipherThon 2.0, a 24-hour national-level hackathon, with my team ByteBlazers! 🚀\n\nProject: HIREZ – AI-Based Hiring Platform\n\n✅ Built an AI-powered recruitment platform using RAG (Retrieval-Augmented Generation), VectorDB, Azure Cloud, and React.js.\n✅ Streamlined hiring processes by integrating OpenAI services for document intelligence.\n✅ Enhanced user experience with Figma-based UI design and React Components.\n✅ Reduced load times by 40% with optimized React.js web pages.",
+      "image": "https://i.ibb.co/rKp8WQM7/image.png",
+      "projectName": "Hirez",
+      "teamName": "ByteBlazers"
+    },
+    {
+      "id": 3,
+      "title": "Winners- Rajasthan Police Hackathon 1.0",
+      "issuer": "Rajasthan Police",
+      "date": "Jan 2024",
+      "description": "Our dynamic team, \"Hackstormers\" participated in Hackathon 1.0 by Rajasthan Police, showcasing our innovative skills and problem-solving mindset.\n\nOur solution was focused on the improvement of the 1930 Helpline, a crucial communication channel for reporting cybercrimes and freezing funds related to these crimes.\n- We have created an Automated Voice-Enabled System that allows users to file a Cyber Case through a Chatbot on the web portal built on Django Framework.\n- Our system leverages various Large Language Models to provide a Chatbot feature that can interact with the users and guide them through the process and acts like AI Legal Decision System.\n- Our system also uses our own trained data to enhance the performance and accuracy of the Chatbot and the Voice-Enabled System",
+      "projectName": "1930 Helpine Improvement",
+      "image": "https://i.ibb.co/NgFLr2vv/image.png",
+      "teamName": "Hackstormers"
+    },
+    {
+      "id": 99,
+      "title": "650+ DSA Problems Solved",
+      "issuer": "LeetCode, Codeforces, GFG, CodeChef",
+      "date": "Jan 2024 - Present",
+      "description": "Solved 650+ DSA problems across competitive coding platforms and participated in multiple coding contests.",
+      "image": "https://i.ibb.co/Sw4DdHNW/logo.png",
+      "projectName": "Competitive Programming",
+      "teamName": "Individual"
+    }
+  ]
+}

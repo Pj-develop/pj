@@ -9,7 +9,7 @@ export const HeroContainer = styled.div`
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
-  @media (max-width: 640) {
+  @media (max-width: 640px) {
     padding: 32px 16px;
   }
   z-index: 1;
@@ -180,21 +180,22 @@ export const ResumeButton = styled.a`
     font-size: 20px;
     font-weight: 600;
     transition: all 0.2s ease-in-out !important;
-    background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    box-shadow:  20px 20px 60px #1F2634,
-    -20px -20px 60px #1F2634;
+    background: linear-gradient(
+      225deg,
+      ${({ theme }) => theme.primary} 0%,
+      ${({ theme }) => theme.primary + "cc"} 100%
+    );
+    box-shadow: 0 12px 28px ${({ theme }) => theme.primary + "40"};
     &:hover {
         transform: scale(1.05);
     transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
+    box-shadow: 0 16px 32px ${({ theme }) => theme.primary + "55"};
+    filter: brightness(1.02);
     }    
     
     
     @media (max-width: 640px) {
+        width: 100%;
         padding: 12px 0;
         font-size: 18px;
     } 

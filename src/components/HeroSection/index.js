@@ -13,7 +13,6 @@ import {
   SubTitle,
   ResumeButton,
 } from "./HeroStyle";
-import HeroImg from "../../images/pj.jpg";
 import Typewriter from "typewriter-effect";
 import { Bio } from "../../data/constants";
 
@@ -42,13 +41,20 @@ const HeroSection = () => {
               </Span>
             </TextLoop>
             <SubTitle>{Bio.description}</SubTitle>
-            <ResumeButton href={Bio.resume} target="display">
+            <ResumeButton
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Check Resume
             </ResumeButton>
           </HeroLeftContainer>
 
           <HeroRightContainer id="Right">
-            <Img src={HeroImg} alt="hero-image" />
+            <Img
+              src={Bio.profileImage || "https://i.ibb.co/wFmMQF7V/Gemini-Generated-Image-jaylgajaylgajayl.png"}
+              alt={`${Bio.name} profile`}
+            />
           </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>

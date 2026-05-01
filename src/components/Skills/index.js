@@ -116,7 +116,40 @@ const SkillItem = styled.div`
 const SkillImage = styled.img`
   width: 24px;
   height: 24px;
+  object-fit: contain;
 `
+
+const SkillImageFallback = styled.div`
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: ${({ theme }) => (theme.isDark ? theme.primary + "22" : theme.white)};
+  border: 1px solid ${({ theme }) => theme.primary + "66"};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.text_primary};
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+`
+
+const SkillIcon = ({ item }) => {
+  const [failed, setFailed] = React.useState(false);
+  const src = item?.image || "";
+  const isPlaceholder =
+    typeof src === "string" && src.includes("i.ibb.co/Sw4DdHNW/logo.png");
+  const showFallback = failed || isPlaceholder || !src;
+  const initials = (item?.name || "?")
+    .split(" ")
+    .map((s) => s[0])
+    .join("")
+    .slice(0, 2);
+
+  if (showFallback) return <SkillImageFallback>{initials}</SkillImageFallback>;
+
+  return <SkillImage src={src} alt={item?.name || "skill"} onError={() => setFailed(true)} />;
+};
 
 
 const Skills = () => {
@@ -133,7 +166,7 @@ const Skills = () => {
       <SkillList>
         {skill.skills.map((item, idx) => (
           <SkillItem key={idx}>
-            <SkillImage src={item.image}/>
+            <SkillIcon item={item} />
             {item.name}
           </SkillItem>
         ))}

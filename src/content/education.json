@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "img": "https://i.ibb.co/4Zyzsqw/lpu.jpg",
+      "school": "Lovely Professional University, Phagwara, Punjab, India",
+      "date": "Aug 2022 - Jul 2026",
+      "grade": "8.69 CGPA",
+      "desc": "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at Lovely Professional University. I have completed 3 semesters and have a CGPA of 8.5. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others. I am also a member of the Google Developers Student Club (GDSC) at LPU, where I am learning and working on exciting projects with a team of talented developers.",
+      "degree": "Bachelor of Technology - BTech in Computer Science and Engineering"
+    },
+    {
+      "id": 1,
+      "img": "https://i.ibb.co/H7mrvqX/masd.jpg",
+      "school": "MASD Public School,Panipat- Haryana, India",
+      "date": "Apr 2021 - Jul 2022",
+      "grade": "80.6%",
+      "desc": "I completed my Class 12th High school education at MASD Public School,Panipat where I studied Physics, Chemistry & Math with Computer Science.",
+      "degree": "CBSE (XII), PCM with Computer Science"
+    },
+    {
+      "id": 2,
+      "img": "https://i.ibb.co/H7mrvqX/masd.jpg",
+      "school": "MASD Public School,Panipat- Haryana, India",
+      "date": "Apr 2019 - Mar 2020",
+      "grade": "92.6%",
+      "desc": "I completed my Class 10th high school education at MASD Public School,Panipat where I studied Python, MySQL and did few Projects Also",
+      "degree": "CBSE (X), Standard Mathematics with Computer Science"
+    }
+  ]
+}
