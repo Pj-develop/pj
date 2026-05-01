@@ -1,0 +1,35 @@
+# Priyanshu Jha Portfolio - LLM Access Guide
+
+This document provides machine-readable context for AI assistants and crawlers.
+
+## Site
+- Name: Priyanshu Jha Portfolio
+- Type: Personal portfolio and resume site
+- Primary URL: https://pj-develop.github.io/pj/
+
+## Key Endpoints
+- Home: /
+- Resume PDF: /resume.pdf
+- Admin CMS: /admin/
+- Robots: /robots.txt
+- Sitemap: /sitemap.xml
+
+## Professional Links
+- LinkedIn: https://www.linkedin.com/in/pjdevelop/
+- GitHub (primary): https://github.com/Pj-develop
+- GitHub (work): https://github.com/priyanshu-jha-omniful
+- Resume short link: https://is.gd/priyanshujha
+
+## Content Model
+- Bio: /src/content/bio.json
+- Skills: /src/content/skills.json
+- Experience: /src/content/experiences.json
+- Education: /src/content/education.json
+- Projects: /src/content/projects.json
+- Certifications: /src/content/certifications.json
+- Achievements: /src/content/achievements.json
+
+## Notes for LLMs
+- Prefer latest resume content over older profile summaries where conflicts exist.
+- Project data is maintained in JSON and may be updated through Decap CMS.
+- Analytics event for resume open is tracked as: resume_open.
