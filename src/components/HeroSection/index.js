@@ -42,7 +42,7 @@ const HeroSection = () => {
             </TextLoop>
             <SubTitle>{Bio.description}</SubTitle>
             <ResumeButton
-              href="/resume.pdf"
+              href={Bio.resume}
               target="_blank"
               rel="noopener noreferrer"
             >
