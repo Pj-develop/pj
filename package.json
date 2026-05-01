@@ -30,7 +30,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "react-snap || echo \"react-snap skipped in sandboxed environment\"",
+    "postbuild": "echo \"postbuild complete\"",
+    "build:prerender": "react-scripts build && react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",

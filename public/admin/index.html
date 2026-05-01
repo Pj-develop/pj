@@ -62,7 +62,7 @@
     <div class="container">
       <section id="loginCard" class="card">
         <h1>Portfolio Admin</h1>
-        <p>Simple frontend login for quick profile updates.</p>
+        <p>Login, edit content JSON, then trigger GitHub Action with generated payload.</p>
         <label for="email">Email</label>
         <input id="email" type="email" placeholder="Enter email" />
         <label for="password">Password</label>
@@ -74,8 +74,8 @@
       </section>
 
       <section id="editorCard" class="card hidden">
-        <h1>Content Editor</h1>
-        <p>Edit JSON and click save. Refresh the portfolio to see updates.</p>
+        <h1>Content Payload Generator</h1>
+        <p>Edit content, generate payload, and use it in GitHub Actions "Run workflow".</p>
         <div class="row">
           <div>
             <label for="bioJson">Bio</label>
@@ -88,12 +88,16 @@
         </div>
         <label for="projJson">Projects</label>
         <textarea id="projJson"></textarea>
+        <label for="payloadJson">Workflow Payload JSON</label>
+        <textarea id="payloadJson" readonly></textarea>
 
         <div class="actions">
-          <button class="primary" id="saveBtn">Save Changes</button>
-          <button class="ghost" id="resetBtn">Reset to Defaults</button>
+          <button class="primary" id="generateBtn">Generate Payload</button>
+          <button class="ghost" id="copyBtn">Copy JSON</button>
+          <button class="ghost" id="downloadBtn">Download JSON</button>
+          <button class="ghost" id="resetBtn">Reset to Repo Defaults</button>
           <button class="ghost" id="logoutBtn">Logout</button>
-          <a class="ghost" style="text-decoration:none;padding:10px 14px;border-radius:10px;" href="/">Open Portfolio</a>
+          <a class="ghost" style="text-decoration:none;padding:10px 14px;border-radius:10px;" href="https://github.com/Pj-develop/pj/actions">Open GitHub Actions</a>
         </div>
         <div id="editorMsg"></div>
       </section>
@@ -105,8 +109,6 @@
           email: "priyanshu.k4444@gmail.com",
           password: "Priyan123$"
         };
-        const STORAGE = "portfolio-content-overrides";
-        const AUTH = "portfolio-admin-auth";
 
         const loginCard = document.getElementById("loginCard");
         const editorCard = document.getElementById("editorCard");
@@ -116,6 +118,7 @@
         const bioJson = document.getElementById("bioJson");
         const expJson = document.getElementById("expJson");
         const projJson = document.getElementById("projJson");
+        const payloadJson = document.getElementById("payloadJson");
 
         let defaults = null;
 
@@ -134,15 +137,19 @@
         };
 
         const hydrateEditor = () => {
-          const saved = JSON.parse(localStorage.getItem(STORAGE) || "{}");
-          const state = {
-            Bio: saved.Bio || defaults.Bio,
-            experiences: saved.experiences || defaults.experiences,
-            projects: saved.projects || defaults.projects
+          bioJson.value = JSON.stringify(defaults.Bio, null, 2);
+          expJson.value = JSON.stringify(defaults.experiences, null, 2);
+          projJson.value = JSON.stringify(defaults.projects, null, 2);
+          payloadJson.value = "";
+        };
+
+        const getPayload = () => {
+          const payload = {
+            Bio: JSON.parse(bioJson.value),
+            experiences: JSON.parse(expJson.value),
+            projects: JSON.parse(projJson.value)
           };
-          bioJson.value = JSON.stringify(state.Bio, null, 2);
-          expJson.value = JSON.stringify(state.experiences, null, 2);
-          projJson.value = JSON.stringify(state.projects, null, 2);
+          return JSON.stringify(payload, null, 2);
         };
 
         const showEditor = async () => {
@@ -156,7 +163,6 @@
           const email = document.getElementById("email").value.trim();
           const password = document.getElementById("password").value;
           if (email === CRED.email && password === CRED.password) {
-            localStorage.setItem(AUTH, "true");
             setMsg(loginMsg, "Login successful.", false);
             await showEditor();
           } else {
@@ -164,34 +170,55 @@
           }
         });
 
-        document.getElementById("saveBtn").addEventListener("click", () => {
+        document.getElementById("generateBtn").addEventListener("click", () => {
           try {
-            const payload = {
-              Bio: JSON.parse(bioJson.value),
-              experiences: JSON.parse(expJson.value),
-              projects: JSON.parse(projJson.value)
-            };
-            localStorage.setItem(STORAGE, JSON.stringify(payload));
-            setMsg(editorMsg, "Saved. Refresh portfolio page to apply updates.", false);
+            payloadJson.value = getPayload();
+            setMsg(editorMsg, "Payload generated. Copy it and paste into GitHub Action input.", false);
+          } catch (error) {
+            setMsg(editorMsg, "Invalid JSON. Please fix format and try again.", true);
+          }
+        });
+
+        document.getElementById("copyBtn").addEventListener("click", async () => {
+          try {
+            if (!payloadJson.value) payloadJson.value = getPayload();
+            await navigator.clipboard.writeText(payloadJson.value);
+            setMsg(editorMsg, "Payload copied to clipboard.", false);
+          } catch (error) {
+            setMsg(editorMsg, "Unable to copy. Generate and copy manually.", true);
+          }
+        });
+
+        document.getElementById("downloadBtn").addEventListener("click", () => {
+          try {
+            if (!payloadJson.value) payloadJson.value = getPayload();
+            const blob = new Blob([payloadJson.value], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "content-update-payload.json";
+            a.click();
+            URL.revokeObjectURL(url);
+            setMsg(editorMsg, "Payload downloaded.", false);
           } catch (error) {
             setMsg(editorMsg, "Invalid JSON. Please fix format and try again.", true);
           }
         });
 
         document.getElementById("resetBtn").addEventListener("click", () => {
-          localStorage.removeItem(STORAGE);
           hydrateEditor();
-          setMsg(editorMsg, "Reset done. Defaults restored.", false);
+          setMsg(editorMsg, "Defaults restored from repository files.", false);
         });
 
         document.getElementById("logoutBtn").addEventListener("click", () => {
-          localStorage.removeItem(AUTH);
-          location.reload();
+          loginCard.classList.remove("hidden");
+          editorCard.classList.add("hidden");
+          document.getElementById("email").value = "";
+          document.getElementById("password").value = "";
+          payloadJson.value = "";
+          editorMsg.textContent = "";
+          loginMsg.textContent = "";
         });
-
-        if (localStorage.getItem(AUTH) === "true") {
-          showEditor();
-        }
       })();
     </script>
   </body>

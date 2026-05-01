@@ -34,12 +34,10 @@
 
     <script type="text/javascript">
       (function () {
+        var isReactSnap = navigator.userAgent === "ReactSnap";
         var isGitHubPages = window.location.hostname.includes("github.io");
         var basePath = isGitHubPages ? "/pj/" : "/";
         var siteUrl = window.location.origin + basePath;
-        var base = document.createElement("base");
-        base.href = basePath;
-        document.head.prepend(base);
 
         var canonical = document.getElementById("canonical-link");
         var ogUrl = document.getElementById("og-url");
@@ -78,12 +76,22 @@
             2
           );
         }
+
+        // Avoid third-party runtime scripts while react-snap prerenders pages.
+        if (!isReactSnap) {
+          var umamiScript = document.createElement("script");
+          umamiScript.defer = true;
+          umamiScript.src = "https://cloud.umami.is/script.js";
+          umamiScript.setAttribute(
+            "data-website-id",
+            "f3e9d20f-1683-4693-938c-05ebbd03da11"
+          );
+          document.head.appendChild(umamiScript);
+        }
       })();
     </script>
 
     <script id="person-jsonld" type="application/ld+json">{}</script>
-
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="f3e9d20f-1683-4693-938c-05ebbd03da11"></script>
 
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" /></noscript>
